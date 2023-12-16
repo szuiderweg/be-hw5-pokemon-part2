@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+//dit is een wijziging
 public class Main {
     // Deze 4 constanten worden gebruikt om tekst met kleur te printen in de console.
     // Hier hoef je niks mee te doen
