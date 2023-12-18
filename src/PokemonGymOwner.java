@@ -1,5 +1,5 @@
 import java.util.List;
-//todo: deze class een subclass maken van pokemontrainer
+
 public class PokemonGymOwner extends PokemonTrainer
 {
     private final String town;
