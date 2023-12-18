@@ -3,7 +3,7 @@ import java.util.List;
 public class PokemonTrainer
 {
     public String playerName;
-    List<Pokemon> pokemons;
+    final List<Pokemon> pokemons;
 
     public PokemonTrainer(String player, List<Pokemon> pokemons)
     {

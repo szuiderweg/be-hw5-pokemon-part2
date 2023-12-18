@@ -1,32 +1,18 @@
 import java.util.List;
 //todo: deze class een subclass maken van pokemontrainer
-public class PokemonGymOwner {
-    private final String name;
+public class PokemonGymOwner extends PokemonTrainer
+{
     private final String town;
 
-    private List<Pokemon> pokemons;
-
-    public PokemonGymOwner(String name, String town, List<Pokemon> pokemons)
+    public PokemonGymOwner(String player, String town,List<Pokemon> pokemons)
     {
-        this.name = name;
+        super(player, pokemons);
         this.town = town;
-        this.pokemons = pokemons;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getTown() {
+    public String getTown()
+    {
         return town;
     }
-
-    public List<Pokemon> getPokemons() {
-        return pokemons;
-    }
-
-
-
-
 
 }
