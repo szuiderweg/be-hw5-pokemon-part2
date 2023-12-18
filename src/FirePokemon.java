@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
+
 
 public class FirePokemon extends Pokemon
 {
@@ -17,26 +17,16 @@ public class FirePokemon extends Pokemon
 
     public void inferno(Pokemon name, Pokemon enemy)
     {
-        int damage;
         System.out.println(name.getName()+" attacks "+enemy.getName()+" with Inferno.");
         //damage calculation: select a random double from 0 to 1 using the Math.random() method,then  multiply with the attackers level and a vulnerability factor depending on enemy type. Then it's rounded off to the nearest integer.
 
-        switch (enemy.getType())
-        {
-            case "grass":
-                damage = (int) Math.round(1.5 * Math.random() * name.getLevel());
-                break;
-            case "water":
-                damage = (int) Math.round(1.2 * Math.random() * name.getLevel());
-                break;
-            case "electric":
-                damage = (int) Math.round(0.8 * Math.random() * name.getLevel());
-                break;
-            default:
-                damage = (int) Math.round(0.5 * Math.random() * name.getLevel());
-                break;
-        }
-        System.out.println(enemy.getName()+" gets hit for "+damage+"hp!");
+        int damage = switch (enemy.getType()) {
+            case "grass" -> (int) Math.round(1.5 * Math.random() * name.getLevel());
+            case "water" -> (int) Math.round(1.2 * Math.random() * name.getLevel());
+            case "electric" -> (int) Math.round(0.8 * Math.random() * name.getLevel());
+            default -> (int) Math.round(0.5 * Math.random() * name.getLevel());
+        };
+        System.out.println(enemy.getName()+" gets hit for "+damage+" hp!");
         //substract damage from enemy hitpoints. hp can become negative
         enemy.setHp(enemy.getHp()-damage);
         System.out.println(enemy.getName()+" has "+enemy.getHp()+" hitpoints remaining.");
@@ -46,55 +36,33 @@ public class FirePokemon extends Pokemon
 
     public void pyroBall(Pokemon name, Pokemon enemy)
     {
-        int damage;
         System.out.println(name.getName()+" attacks "+enemy.getName()+" with Pyroball.");
         //damage calculation: select a random double from 0 to 1 using the Math.random() method,then  multiply with the attackers level and a vulnerability factor depending on enemy type. Then it's rounded off to the nearest integer.
 
-        switch (enemy.getType())
-        {
-            case "grass":
-                damage = (int) Math.round(1.5 * Math.random() * name.getLevel());
-                break;
-            case "water":
-                damage = (int) Math.round(1.2 * Math.random() * name.getLevel());
-                break;
-            case "electric":
-                damage = (int) Math.round(0.8 * Math.random() * name.getLevel());
-                break;
-            default:
-                damage = (int) Math.round(0.5 * Math.random() * name.getLevel());
-                break;
-        }
-        System.out.println(enemy.getName()+" gets hit for "+damage+"hp!");
+       int damage = switch (enemy.getType()) {
+            case "grass" -> (int) Math.round(1.5 * Math.random() * name.getLevel());
+            case "water" -> (int) Math.round(1.2 * Math.random() * name.getLevel());
+            case "electric" -> (int) Math.round(0.8 * Math.random() * name.getLevel());
+            default -> (int) Math.round(0.5 * Math.random() * name.getLevel());
+        };
+        System.out.println(enemy.getName()+" gets hit for "+damage+" hp!");
         //substract damage from enemy hitpoints. hp can become negative
         enemy.setHp(enemy.getHp()-damage);
         System.out.println(enemy.getName()+" has "+enemy.getHp()+" hitpoints remaining.");
-
-
     }
 
     public void fireLash(Pokemon name, Pokemon enemy)
     {
-        int damage;
         System.out.println(name.getName()+" attacks "+enemy.getName()+" with Firelash.");
         //damage calculation: select a random double from 0 to 1 using the Math.random() method,then  multiply with the attackers level and a vulnerability factor depending on enemy type. Then it's rounded off to the nearest integer.
 
-        switch (enemy.getType())
-        {
-            case "grass":
-                damage = (int) Math.round(1.5 * Math.random() * name.getLevel());
-                break;
-            case "water":
-                damage = (int) Math.round(1.2 * Math.random() * name.getLevel());
-                break;
-            case "electric":
-                damage = (int) Math.round(0.8 * Math.random() * name.getLevel());
-                break;
-            default:
-                damage = (int) Math.round(0.5 * Math.random() * name.getLevel());
-                break;
-        }
-        System.out.println(enemy.getName()+" gets hit for "+damage+"hp!");
+        int damage = switch (enemy.getType()) {
+            case "grass" -> (int) Math.round(1.5 * Math.random() * name.getLevel());
+            case "water" -> (int) Math.round(1.2 * Math.random() * name.getLevel());
+            case "electric" -> (int) Math.round(0.8 * Math.random() * name.getLevel());
+            default -> (int) Math.round(0.5 * Math.random() * name.getLevel());
+        };
+        System.out.println(enemy.getName()+" gets hit for "+damage+" hp!");
         //substract damage from enemy hitpoints. hp can become negative
         enemy.setHp(enemy.getHp()-damage);
         System.out.println(enemy.getName()+" has "+enemy.getHp()+" hitpoints remaining.");
@@ -103,30 +71,21 @@ public class FirePokemon extends Pokemon
 
     public void flameThrower(Pokemon name, Pokemon enemy)
     {
-        int damage;
-        System.out.println(name.getName()+" attacks "+enemy.getName()+" with flameThrower.");
-        //damage calculation: select a random double from 0 to 1 using the Math.random() method,then  multiply with the attackers level and a vulnerability factor depending on enemy type. Then it's rounded off to the nearest integer.
 
-        switch (enemy.getType())
-        {
-            case "grass":
-                damage = (int) Math.round(1.5 * Math.random() * name.getLevel());
-                break;
-            case "water":
-                damage = (int) Math.round(1.2 * Math.random() * name.getLevel());
-                break;
-            case "electric":
-                damage = (int) Math.round(0.8 * Math.random() * name.getLevel());
-                break;
-            default:
-                damage = (int) Math.round(0.5 * Math.random() * name.getLevel());
-                break;
-        }
-        System.out.println(enemy.getName()+" gets hit for "+damage+"hp!");
+        System.out.println(name.getName()+" attacks "+enemy.getName()+" with flameThrower.");
+
+        int damage = switch (enemy.getType()) {
+            case "grass" -> (int) Math.round(1.5 * Math.random() * name.getLevel());
+            case "water" -> (int) Math.round(1.2 * Math.random() * name.getLevel());
+            case "electric" -> (int) Math.round(0.8 * Math.random() * name.getLevel());
+            default -> (int) Math.round(0.5 * Math.random() * name.getLevel());
+        };
+
+        System.out.println(enemy.getName()+" gets hit for "+damage+" hp!");
         //substract damage from enemy hitpoints. hp can become negative
         enemy.setHp(enemy.getHp()-damage);
         System.out.println(enemy.getName()+" has "+enemy.getHp()+" hitpoints remaining.");
-
     }
+
 
 }
