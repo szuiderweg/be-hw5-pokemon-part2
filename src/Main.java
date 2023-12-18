@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-//dit is een wijziging
+//todo: toegankelijkheid van alles nagaan. alles staat nu op public, maar is dat wel zo handig?
 public class Main {
     // Deze 4 constanten worden gebruikt om tekst met kleur te printen in de console.
     // Hier hoef je niks mee te doen
@@ -12,6 +12,7 @@ public class Main {
     public static final String ANSI_GREEN = "\u001B[32m";
 
     // Dit zijn de Pokemons die je tot je beschikking hebt
+    //parameters zijn TypePokemon(name, level, hp, food, sound)
     private static final FirePokemon charizard = new FirePokemon("Charrizard", 76, 150, "firenougats", "GRRRRRRRRRRRRRRR");
     private static final WaterPokemon blastoise = new WaterPokemon("Blastoise", 40, 110, "Pokeflakes", "Blaaaaasssssstooooiiiiissss");
     private static final GrassPokemon venusaur = new GrassPokemon("Venusaur", 50, 135, "Pokeleafs", "Veeeeeeeeennnnnuuuuuusaur");
